@@ -1,0 +1,162 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container register">
+<div class="row">
+<div class="col-md-3 register-left">
+
+<h3>Welcome to the Flex Registration Portal</h3>
+<p>Select whether you are a Teacher or a Student first, then proceed.</p>
+<a href="/FLEX/sidebar/Academics/AcademicsPortal.html"><button class="btnLogout">Go Back</button></a>
+</div>
+<div class="col-md-9 register-right">
+<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Student</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Faculty</a>
+</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<h3 class="register-heading">Apply as a Student</h3>
+<form action="add_user.php" method="POST">
+<div class="row register-form">
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Enter Name *" value="" name="NAME">
+</div>
+<div class="form-group">
+    <input type="date" class="form-control" placeholder="Date Of Birth *" value="" name="DOB">
+</div>
+<div class="form-group">
+    <input type="number" step="0.01" class="form-control" placeholder="CGPA *" value="" name="CGPA">
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Batch *" value="" name="BATCH">
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Father's Name *" value="" name="FATHER_NAME">
+</div>
+
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Username *" value="" name="USERNAME">
+</div>
+<div class="form-group">
+<div class="maxl">
+<label class="radio inline">
+<input type="radio" name="GENDER" value="M">
+<span> Male </span>
+</label>
+<label class="radio inline">
+<input type="radio" name="GENDER" value="F">
+<span>Female </span>
+</label>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input type="email" class="form-control" placeholder="Your Email *" value="" name="EMAIL">
+</div>
+<div class="form-group">
+<input type="text" minlength="11" maxlength="15" class="form-control" placeholder="Your Phone *" value="" name="SMOBILE_NO">
+</div>
+<div class="form-group">
+<select name="CAMPUS" class="form-control" >
+<option class="hidden" selected="" disabled="">Please select your Campus</option>
+<option>Islamabad</option>
+<option>Karachi</option>
+<option>Lahore</option>
+<option>Peshawar</option>
+<option>Chiniot-Faisalabad</option>
+</select>
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Degree *" value="" name="DEGREE">
+</div>
+<div class="form-group">
+<input type="text" minlength="11" maxlength="15" class="form-control" placeholder="Father's Number *" value="" name="FATHER_NO">
+</div>
+<div class="form-group">
+    <input type="password" class="form-control" placeholder="Password *" value="" name="PASSWORD">
+</div>
+<input type="submit" class="btnRegister" value="Register">
+</form>
+</div>
+</div>
+</div>
+<div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<h3 class="register-heading">Apply as a Faculty</h3>
+<form action="add_teacher.php" method="POST">
+<div class="row register-form">
+<div class="col-md-6">
+    
+<div class="form-group">
+ <input type="text" class="form-control" placeholder="Name *" value="" name="NAME">
+</div>
+<div class="form-group">
+    <input type="date" class="form-control" placeholder="Date Of Birth *" value="" name="DOB">
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Department *" value="" name="DEPARTMENT">
+</div>
+
+<div class="form-group">
+    <input type="number" step="0.01" class="form-control" placeholder="BS (CGPA) *" value="" name="BSCGPA">
+</div>
+
+
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Username *" value="" name="USERNAME">
+</div>
+<div class="form-group">
+    <div class="maxl">
+        <label class="radio inline">
+            <input type="radio" name="GENDER" value="M" >
+            <span> Male </span>
+        </label>
+        <label class="radio inline">
+            <input type="radio" name="GENDER" value="F">
+            <span>Female </span>
+        </label>
+    </div>
+</div>
+</div>
+<div class="col-md-6">
+<!-- <div class="form-group">
+<input type="password" class="form-control" placeholder="Password *" value="">
+</div> -->
+<div class="form-group">
+    <input type="text" minlength="11" maxlength="15" name="TMOBILE_NO" class="form-control"
+        placeholder="Your Phone *" value="">
+</div>
+<div class="form-group">
+    <input type="email" class="form-control" placeholder="Your Email *" value="" name="EMAIL">
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="University *" value="" name="UNIVERSITY">
+</div>
+<div class="form-group">
+    <input type="number" class="form-control" step="0.01" placeholder="MS (CGPA) *" value="" name="MSCGPA">
+</div>
+<div class="form-group">
+<input type="password" class="form-control" placeholder="Password *" value="" name="PASSWORD">
+</div>
+
+<input type="submit" class="btnRegister" value="Register">
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> <script type="text/javascript"></script></body></html>

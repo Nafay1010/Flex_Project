@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin-top: -5px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(227, 233, 228);
+}
+
+.row{
+    /* background: rgb(255, 255, 255); */
+    background: rgb(145, 154, 146); 
+    background: linear-gradient(90deg, rgba(145, 154, 146, 0.2665441176470589) 58%, rgba(28, 200, 175, 1) 100%);
+    border-radius: 20px;
+}
+
+.btn1{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 30%;
+    background-color: rgb(56, 55, 55);
+    color: azure;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.btn1:hover{
+    background: white;
+    color: black;
+    border: 1px solid;
+    transition: 0.2s;
+    
+}
